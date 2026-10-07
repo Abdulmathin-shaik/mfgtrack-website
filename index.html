@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mfgtrack — Visual inspection for small manufacturers</title>
+<meta name="description" content="Few-shot visual inspection on the devices you already own. Snap photos, flag defects, guide operators — built for small manufacturing plants.">
+<style>
+  :root { --ink:#101418; --muted:#5b6570; --accent:#0b5fff; --bg:#f7f9fc; --card:#ffffff; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; color:var(--ink); background:var(--bg); line-height:1.6; }
+  .wrap { max-width:960px; margin:0 auto; padding:0 24px; }
+  header { padding:28px 0; display:flex; justify-content:space-between; align-items:center; }
+  .logo { font-weight:800; font-size:22px; letter-spacing:-0.5px; }
+  .logo span { color:var(--accent); }
+  .cta { background:var(--accent); color:#fff; text-decoration:none; padding:12px 24px; border-radius:10px; font-weight:600; }
+  .hero { padding:72px 0 56px; text-align:left; }
+  .hero h1 { font-size:44px; line-height:1.15; letter-spacing:-1px; max-width:640px; }
+  .hero p { font-size:19px; color:var(--muted); max-width:620px; margin:20px 0 28px; }
+  .badges { display:flex; gap:10px; flex-wrap:wrap; margin-top:28px; }
+  .badge { background:#e9effd; color:#123a8f; font-size:13px; font-weight:600; padding:6px 14px; border-radius:999px; }
+  section { padding:48px 0; }
+  h2 { font-size:28px; letter-spacing:-0.5px; margin-bottom:8px; }
+  .sub { color:var(--muted); margin-bottom:28px; max-width:640px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:18px; }
+  .card { background:var(--card); border:1px solid #e4e9f0; border-radius:14px; padding:26px; }
+  .card h3 { font-size:18px; margin-bottom:8px; }
+  .card p { color:var(--muted); font-size:15px; }
+  .steps { counter-reset:step; display:grid; gap:14px; margin-top:8px; }
+  .step { background:var(--card); border:1px solid #e4e9f0; border-radius:14px; padding:20px 22px; display:flex; gap:16px; align-items:flex-start; }
+  .step::before { counter-increment:step; content:counter(step); background:var(--accent); color:#fff; font-weight:700; width:32px; height:32px; border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+  .pilot { background:#101418; color:#fff; border-radius:18px; padding:48px; }
+  .pilot h2 { color:#fff; }
+  .pilot p { color:#b9c2cc; max-width:600px; margin:12px 0 24px; }
+  .pilot .cta { display:inline-block; }
+  footer { padding:36px 0 48px; color:var(--muted); font-size:14px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; }
+  footer a { color:var(--accent); text-decoration:none; }
+  @media (max-width:640px){ .hero h1{font-size:34px;} .pilot{padding:32px 24px;} }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="logo">mfg<span>track</span></div>
+    <a class="cta" href="mailto:admin@mfgtrack.xyz">Book a pilot</a>
+  </header>
+
+  <div class="hero">
+    <h1>Visual inspection for small manufacturers, on the devices you already own.</h1>
+    <p>Photograph parts with a phone or tablet. Mfgtrack flags defects, explains what it sees, and guides your operators — trained on just a handful of your own examples.</p>
+    <a class="cta" href="mailto:admin@mfgtrack.xyz">Start a pilot — admin@mfgtrack.xyz</a>
+    <div class="badges">
+      <span class="badge">Few-shot learning</span>
+      <span class="badge">Anomaly detection</span>
+      <span class="badge">No hardware installs</span>
+      <span class="badge">Remote &amp; upload-first</span>
+    </div>
+  </div>
+
+  <section>
+    <h2>Built for plants like yours</h2>
+    <p class="sub">Small and mid-size plants (10–150 people) run on tribal knowledge and tired eyes. We start where camera inspection pays off fastest — slower lines, manual stations, incoming QC.</p>
+    <div class="grid">
+      <div class="card">
+        <h3>Few-shot defect detection</h3>
+        <p>Show the system a few good parts and a few bad ones. It learns your defect modes — scratches, dents, missing features, misassembly — without a thousand-image dataset.</p>
+      </div>
+      <div class="card">
+        <h3>Operator guidance</h3>
+        <p>Every flag comes with a plain-language explanation of what was seen and where, so your operators trust the call instead of second-guessing it.</p>
+      </div>
+      <div class="card">
+        <h3>Anomaly detection</h3>
+        <p>For the defects you haven't seen yet. The system flags anything that doesn't look like your known-good parts, even new failure modes.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>How it works</h2>
+    <p class="sub">No frozen hardware SKUs, no line shutdowns, no six-month integration project.</p>
+    <div class="steps">
+      <div class="step"><div><strong>Send us photos.</strong> A few dozen images of good and defective parts, straight from a phone.</div></div>
+      <div class="step"><div><strong>We tune the models.</strong> Few-shot and anomaly-detection models trained on your parts, validated against your defect definitions.</div></div>
+      <div class="step"><div><strong>Your team inspects on a tablet.</strong> Operators photograph parts at the station and get instant pass/fail calls with explanations.</div></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="pilot">
+      <h2>Bounded pilots, fixed price.</h2>
+      <p>Every engagement is a fixed-scope pilot at a fixed price — typically $1,500–$3,000. You know exactly what you're getting before we start, and it's designed to prove ROI on one station before anything expands.</p>
+      <a class="cta" href="mailto:admin@mfgtrack.xyz">Talk to us — admin@mfgtrack.xyz</a>
+    </div>
+  </section>
+
+  <footer>
+    <div>© 2026 Mfgtrack · Hutto, Texas</div>
+    <div><a href="mailto:admin@mfgtrack.xyz">admin@mfgtrack.xyz</a></div>
+  </footer>
+</div>
+</body>
+</html>
